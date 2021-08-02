@@ -13,6 +13,6 @@ FROM (
       INNER JOIN cd.facilities facs ON bks.facid = facs.facid
     WHERE bks.starttime >= '2012-09-14'
       AND bks.starttime < '2012-09-15'
-  )
+  ) AS bookings
 WHERE cost > 30
 ORDER BY cost DESC;
